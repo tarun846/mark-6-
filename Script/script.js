@@ -7,10 +7,9 @@ async function languageconvertor(val) {
         const data = await fetch(`https://api.funtranslations.com/translate/minion.json?text=${val}`)
         const datavalue  = await data.json()
         languageinput.textContent =  datavalue.contents.translated
-         console.log(value);
     } catch (error) {
         alert("some error occured")
-        console.log(error);
+        console.error(error);
         
      }
  }
